@@ -74,7 +74,9 @@ Speaker enrollment aims to learn speaker specific models form the features extra
 %cite the dataset and paper about it
 Most datasets that we have seen have been developed in controlled environments (for eg TIMIT dataset), even though they contain recordings in different sessions. Since many of these datasets were human labeled and cleaned manually they are typically smaller in size. Recently a team at Oxford released their VoxCeleb dataset which contains more than 1M labeled audio clips for around 7000 different celebrities from Youtube. The data is publicly available for research in the field \cite{voxCeleb}.
 
-The dataset contains various \emph{.wav} files that are a few seconds long and contain voice of a speaker in real life environments. The data contains various clips for each speaker form different Youtube videos, in different environments, with a lot of variations for each speaker.
+%The dataset contains various \emph{.wav} files that are a few seconds long and contain voice of a speaker in real life environments. The data contains various clips for each speaker form different Youtube videos, in different environments, with a lot of variations for each speaker.
+
+For the intrusion detection task, we plan to reduce the 7000 class problem down to a 6 class problem, where 5 classes are for legitimate users, and the 6th class belongs to anyone who is not authorized (intruder). We did not choose a binary setting as we want to allow room for \emph{special privileges} of each user in our application.
 \section{Techniques}
 For the purpose of the project we have identified a few different techniques that we would like to experiment with below:
 \begin{enumerate}
