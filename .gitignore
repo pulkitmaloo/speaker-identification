@@ -1,3 +1,4 @@
+main.pdf
 *.cut
 *.aux
 *.bbl
@@ -6,3 +7,4 @@
 *.out
 *.synctex.*
 *.bib.bak
+*.log
