@@ -1,0 +1,7 @@
+*.cut
+*.aux
+*.bbl
+*.blg
+*.fls
+*.out
+*.synctex.*

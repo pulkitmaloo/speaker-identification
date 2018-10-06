@@ -1,0 +1,131 @@
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{graphicx}
+\usepackage{breqn}
+%\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+%\usepackage{appendix}
+%\usepackage{spconf}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{%
+    /Title (Speaker Identification)
+    /Author (Arnav Arnav, Dheeraj Singh, Pulkit Maloo)
+}
+\setcounter{secnumdepth}{0}
+\nocopyright
+\begin{document}
+% The file aaai.sty is the style file for AAAI Press
+% proceedings, working notes, and technical reports.
+%
+\title{Project Proposal: Intrusion Detection through Speaker Identification}
+\author{%
+    %% YAAS QUEEN (burrito)!!!
+    Arnav Arnav\\
+    Indiana University Bloomington \\
+    School of Informatics and Computing \\
+    aarnav@iu.edu \\
+    \And
+    Dheeraj Singh\\
+    Indiana University Bloomington \\
+    School of Informatics and Computing \\
+    dhsingh@iu.edu \\
+    \And
+    Pulkit Maloo\\
+    Indiana University Bloomington \\
+    School of Informatics and Computing \\
+    maloop@iu.edu \\
+}
+\maketitle
+\begin{abstract}
+\begin{quote}
+% such BS, much wow, amaze!!
+% srsly though, need some actual backing for this
+Speaker identification and verification has received a lot of attention in the recent years. Recognizing individual speakers from voice samples that are pre-recorded can have many applications in fields of security such as for personal assistant applications such as Amazon Alexa, and multi factor authentication. Particularly for home assistant applications, it may be beneficial to identify each individual of the house correctly, and alert the users if there is an intrusion attempt. In this project we aim to use machine learning and deep learning models for this task and aim to develop an application that can demonstrate a use case.
+
+\end{quote}
+\end{abstract}
+
+% better keywords needed
+\textbf{Keywords :} Signal Processing, Speaker Identification, Machine Learning, Deep Learning
+
+
+\section{Introduction}
+Speaker identification aims to recognize the identity of individual speakers from an input audio. The task of verification aims to check whether an individual is who they claim to be based on the speech of the user. The task can be performed in two ways: text dependent and text independent.  In text dependent cases, the input utterance is always a keyword or keyphrase selected by the user, while text independent speaker identification aims to do the same task for any utterance. \cite{cassidy-speech}
+
+The task of speaker identification and verification can be broken down into three sub-tasks: Feature extraction, speaker enrollment, speaker verification.
+Feature extraction aims to extract features from the audio inputs that can help in identifying users easily. Some commonly used feature extraction  methods include Mel Frequency Cepstral Coefficients (MFCC), Short Time Fourier Transform (STFT), Perceptual Linear Prediction (PLP), and Convolutional Neural Network (CNN) features.
+Speaker enrollment aims to learn speaker specific models form the features extracted in the feature extraction phase, and the final identification task tries to find the closest matching model for an input signal \cite{sv-cnn}. 
+%\section{Background and Related Work}
+%Optional here
+
+\section{Dataset}
+%cite the dataset and paper about it
+Most datasets that we have seen have been developed in controlled environments (for eg TIMIT dataset), even though they contain recordings in different sessions. Since many of these datasets were human labeled and cleaned manually they are typically smaller in size. Recently a team at Oxford released their VoxCeleb dataset which contains more than 1M labeled audio clips for around 7000 different celebrities from Youtube. The data is publicly available for research in the field \cite{voxCeleb}.
+
+The dataset contains various \emph{.wav} files that are a few seconds long and contain voice of a speaker in real life environments. The data contains various clips for each speaker form different Youtube videos, in different environments, with a lot of variations for each speaker.
+\section{Techniques}
+For the purpose of the project we have identified a few different techniques that we would like to experiment with below:
+\begin{enumerate}
+	\item Speaker identification using traditional methods (GMM UBM, RBM, kallman filtering, MFCC features and SVM etc)
+	
+	\item Speaker identification using deep learning methods (LSTMs, CNNs, multi-channel neural networks).
+	
+	\item Use of Bayesian Methods to understand uncertainty for speaker Identification.
+	
+	\item Attempt to use attention based deep learning models .
+	
+	\item Train speaker identification in the intrusion detection scenario with few utterances from legitimate speakers.
+	
+	\item Develop an application based on the trained model
+	
+\end{enumerate}
+\section{Goals}
+We have identified the following goals that we want to accomplish by the end of this project. These are tentative goals and are subject to change as we go along with the project.
+\begin{enumerate}
+	\item Understanding traditional feature extraction methods in signal processing, specifically for the task of speaker identification.
+	
+	\item Using Machine learning and deep learning techniques to train models that can identify individual speakers in real time.
+	
+	\item Using Bayesian approach to understand the uncertainty in the predictions made by the model, to better understand the mistakes.
+	
+	\item Develop an application based on the models developed that can be easily installed and used easily for demonstrated.
+\end{enumerate}
+%\section{Approach}
+
+%\section{Results}
+
+%\section{Conclusion}
+%\begin{quote}
+    
+%we respecc
+
+%We protecc
+
+%but most importantly 
+
+%we fight bacc
+%\end{quote}
+%\section{Future Work}
+
+\section{Acknowledgements}
+We would like to thank professor Minje Kim for providing us the opportunity to work on such an interesting visualization project. 
+
+We would also like to thank Oxford University for releasing the VoxCeleb dataset for this task.
+
+\bibliography{report.bib}
+\bibliographystyle{aaai}
+
+
+\end{document}
